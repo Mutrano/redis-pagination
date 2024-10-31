@@ -10,4 +10,5 @@ import java.util.*
 @Repository
 interface DirectorRepository:CrudRepository<Director,String>{
     fun findByNome(nome:String): Optional<Director>
+    fun findAll(pageable: Pageable): Page<Director>
 }
